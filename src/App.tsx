@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './App.scss';
 import {Button} from 'antd'
 import {
@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 
-function App() {
+const App:FC = ()=> {
   return (
     <div className="App">
       <Button type='dashed' size='middle'>Antd Button</Button>
