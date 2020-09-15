@@ -7,3 +7,8 @@
 3. [typescript](https://www.tslang.cn/docs/home.html)
 
 4. [redux](https://www.redux.org.cn/) / [react-redux](https://github.com/reduxjs/react-redux)
+
+### Target
+1. Learn React + React Router + Redux
+2. Learn Typescript
+3. admin 迁移（o2o-admin）
