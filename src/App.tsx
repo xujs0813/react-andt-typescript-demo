@@ -7,12 +7,19 @@ import './App.scss';
 import { Layout, } from 'antd';
 import Header from './components/Header'
 import Sider from './components/Sider'
+import testRoutes,{routes, SubMenuItem} from './routes'
+import {   
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link } from "react-router-dom";
 const { Content } = Layout;
 
 
 const App:FC = ()=> {
   return (
     <div className="App">
+      <Router>
         <Layout>
           <Header></Header>
           <Layout>
@@ -26,11 +33,23 @@ const App:FC = ()=> {
                   minHeight: 280,
                 }}
               >
-                Content
+                <Switch>
+                  {
+                        testRoutes.map(route=>(
+                            <Route
+                                key={route.key}
+                                path={route.path}
+                                exact={route.exact}
+                                children={route.Component}/>
+                        ))
+                    }
+                </Switch>
               </Content>
             </Layout>
           </Layout>
         </Layout>
+      </Router>
+        
     </div>
   );
 }
